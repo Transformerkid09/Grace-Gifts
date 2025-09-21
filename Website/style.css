@@ -1,0 +1,186 @@
+/* ========== Global Styles ========== */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+p, li {
+  color: white;
+  font-size: 16px;
+}
+
+/* ========== Navigation Buttons ========== */
+.button-column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+  margin: 20px; /* keeps it away from edges */
+}
+
+.button-column a {
+  text-decoration: none; /* remove underlines */
+}
+
+.button-column button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.button-column button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ========== Links ========== */
+a {
+  transition: color 0.3s ease;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: lightgray; /* easier to see than blue */
+}
+
+a:hover {
+  color: cyan;
+}
+
+a:active {
+  color: orange;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .button-column {
+    flex-direction: row; /* horizontal on smaller screens */
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .button-column button {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+
+  .hero img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Calendar Container & Button */
+.calendar-container {
+  position: relative;
+  width: 800px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.calendar-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.calendar-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .calendar-container iframe {
+    width: 100%;
+    height: 500px;
+  }
+
+  .calendar-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: hero text */
+.hero p {
+  margin-top: 10px;
+  color: #ddd;
+}
+/* Gallery-style grid for Pricing page */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
